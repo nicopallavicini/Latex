@@ -1,0 +1,48 @@
+\documentclass[11pt, a4paper]{book}
+\author{Nicolò Pallavicini}
+\title{Analisi Matematica 1}
+\usepackage[italian]{babel}
+\begin{document}
+
+\maketitle
+
+\chapter{Insiemi Numerici}
+\section{Irrazionalità di $\sqrt{2}$}
+\section{Numerabilità di $\emph{Q}$}
+\section{Non Numerabilità di $\emph{R}$}
+\section{Prodotto in forma trigonometrica di numeri di $\emph{C}$}
+\section{Potenza e radice $\textit{n-esima}$ di un numero complesso}
+
+\newpage
+\vspace{5cm}
+\section*{1.1}
+
+
+
+\chapter{Successioni}
+\section{Teorema di Monotonia}
+\section{Corollario del Teorema di Monotonia}
+\section{Teorema di unicità del limite}
+\section{Algebra dei Limiti (somma e prodotto)}
+\section{Teorema di permanenza del segno}
+\section{Teorema del confronto}
+\section{Limiti notevoli di successioni}
+
+\chapter{Serie Numeriche}
+\section{Carattere della $\emph{Serie Geometrica}$ e della $\emph{Serie di Mengoli}$}
+\section{Condizione Necessaria per la convergenza di una serie}
+\section{Criterio del $\emph{Confronto}$}
+\section{Criterio del $\emph{Confronto Asintotico}$}
+\section{Criterio del $\emph{Rapporto}$}
+\section{Comportamento di $\sum\frac{1}{n}$}
+\section{Comportamento di $\sum\frac{1}{(n^\alpha)}$}
+\section{Comportamento di $\sum\frac{1}{(n^\alpha\ln^\beta n)}$}
+
+\chapter{Funzioni}
+\section{Teorema della continuità della Funzione Composta}
+\section{Teorema degli Zeri}
+\section{Teorema di Darboux o dei valori intermedi}
+\section{Teorema di continuità della funzione inversa}
+
+
+\end{document}
