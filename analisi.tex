@@ -1,24 +1,25 @@
-\documentclass[11pt, a4paper]{book}
+\documentclass[11pt, a4paper]{article}
 \usepackage[italian]{babel}
 \usepackage{amsmath}
 \author{Nicolò Pallavicini}
 \title{Analisi Matematica 1}
 \begin{document}
 \maketitle
-
-\chapter{Insiemi Numerici}
-\section{Irrazionalità di $\sqrt{2}$}
-\subsection*{Dimostrazione}
+\newpage
+\section{Insiemi Numerici}
+\subsection{Irrazionalità di $\sqrt{2}$}
+\subsubsection*{Dimostrazione}
 Supponiamo per assurdo che $\sqrt{2}$ $\in$ Q. Allora se così fosse, $\sqrt{2}$ sarebbe rappresentabile come $\frac{n}{m}$ con n,m $\in{N}$ e primi tra loro. Allora risolvendo l'equazione avremmo: \begin{math}
-2=\frac{n^2}{m^2},2m^2=n^2
+2=\frac{n^2}{m^2},$\hspace{0.2cm}$2m^2=n^2
 \end{math}.
 \\
 Ciò implica che m è pari, ma quindi anche n deve essere pari e può essere scritto come \begin{math} n=2k \end{math}
 e quindi l'equazione può essere riscritta nella forma: \begin{math} 2m^2=4n^2 \end{math} abbiamo quindi trovato che i due numeri non sono ridotti a fattori primi. \textbf{Assurdo per ipotesi, $\sqrt{2}$ deve essere irrazionale.}
 
-\section{Numerabilità di $\emph{Q}$}
-\subsection*{Dimostrazione}
+\subsection{Numerabilità di $\emph{Q}$}
+\subsubsection*{Dimostrazione}
 Dimostriamo che $ Q^+$ è numerabile. Rappresentiamo ogni numero razionale come $\frac{n}{m}$ con n,m interi positivi.\	
+\\
 \\
 \begin{tabular}{|c|c|c|c|}
 \hline
@@ -38,7 +39,9 @@ $\frac{1}{4}$ & $\frac{2}{3}$ & $\frac{3}{2}$ & $\frac{4}{1}$\\
 \hline
 \end{tabular}
 \\
+\\
 Ogni riga ha una lunghezza finita, quindi possiamo mettere in corrispondenza biunivoca con N.
+\\
 \\
 \begin{tabular}{lcrlcrlcrl}
 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & ...\\
@@ -48,8 +51,8 @@ $\frac{1}{1}$ & $\frac{1}{2}$ & $\frac{2}{1}$ & $\frac{1}{3}$ & $\frac{3}{1}$ & 
 \\
 \textbf{L'insieme $Q^+$ è numerabile, quindi anche Q lo è.}
 
-\section{Non Numerabilità di $\emph{R}$}
-\subsection*{Dimostrazione}
+\subsection{Non Numerabilità di $\emph{R}$}
+\subsubsection*{Dimostrazione}
 Dimostriamo che l'intervallo [0,1] ha una cardinalità non numerabile da cui segue che R non è numerabile. Supponiamo per assurdo che [0,1] sia numerabile e disponiamo tutti i numeri reali dell'intervallo [0,1] in un elenco $r_1, r_2,r_3...$\\ Scriviamo ogni $r_i$ in forma decimale:
 \begin{tabular}{c}
 \begin{math} r_1=0,a_{11} a_{12} a_{13} ... \end{math}\\
@@ -58,7 +61,7 @@ Dimostriamo che l'intervallo [0,1] ha una cardinalità non numerabile da cui seg
 \end{tabular}
 \\
 \\
-\\x
+\\
 Definiamo $r=0,b_1 b_2 b_3 ...$ dove le cifre $b_i$ sono: 
 $
 \left \{
@@ -81,37 +84,55 @@ Questa è una contraddizione perchè avevamo supposto che gli $r_i$ esaurissero 
 \\
 \textbf{[0,1] non è numerabile, quindi R non è numerabile.}
 
-\section{Prodotto in forma trigonometrica di numeri di $\emph{C}$}
-\section{Potenza e radice $\textit{n-esima}$ di un numero complesso}
+\subsection{Prodotto in forma trigonometrica di numeri di $\emph{C}$}
+\subsubsection*{Dimostrazione}
+\begin{math}
+z_1=\rho_1(\cos(\Theta_1)+i\sin(\Theta_1)),z_2=\rho_2(\cos(\Theta_2)+i\sin(\Theta_2))\\
+z_1z_2=\rho_1\rho_2(\cos(\Theta_1)\cos(\Theta_2)-\sin(\Theta_1)\sin(\Theta_2)+i(\sin(\Theta_1)\cos(\Theta_2)+\cos(\Theta_1)\sin(\Theta_2))\\
+z_1z_2=\rho_1\rho_2(\cos(\Theta_1+\Theta_2)+i\sin(\Theta_1+\Theta_2))
+\end{math}
+\subsection{Potenza e radice $\textit{n-esima}$ di un numero complesso}
+\subsubsection*{Dimostrazione}
+Sia w $\in$ C, $w\neq0$ e $n\geq 1$. Esistono esattamente n radici n-esime complesse $z_0,z_1, ... , z_{n-1}$ di w. Posto $ w=r(\cos\Theta + i\sin\Theta)$ e $z_k = \rho_k(\cos\Theta_k + i\sin\Theta_k)$ abbiamo:\\
+$\rho_k=r^{\frac{1}{n}}, \hspace{0.2cm} \Theta_k=\frac{\rho+2k\Pi}{n}, \hspace{0.2cm} k=0,1,2,...,n-1	$\\
+Mostriamo che non esistono altre radici. Un numero $R(\cos\gamma + i\sin\gamma)$ per essere radice n-esima di w, dovrebbe essere:\\
+$R^n=r \hspace{0.2cm} e \hspace{0.2cm} n\gamma=\rho+2k\Pi \hspace{0.2cm} con \hspace{0.2cm} h\in Z$\\ cioè:\\ 
+$R=r^{\frac{1}{n}} \hspace{0.2cm} e \hspace{0.2cm} \gamma=\frac{\rho}{n}+\frac{2h\Pi}{n}$
+\\
+\\
+Dando ad h i valori 0,1,...,n-1 troviamo i numeri $z_k$. Dando un altro valore $\overline{h}=k+mn$ ($m\in Z$ è il quoziente e k è il resto della divisione di $\overline{h}$ per n), per cui: $\gamma=\frac{\rho}{n}+\frac{2k\Pi}{n}+2m\Pi=\Theta_k+2m\Pi$ ritroveremo gli stessi $z_k$ precedenti.\\\\
+Abbiamo dimostrato che \textbf{Esistono esattamente n radice n-esime complesse.}
 
+\newpage
 
+\section{Successioni}
+\subsection{Teorema di Monotonia}
+\subsection{Corollario del Teorema di Monotonia}
+\subsection{Teorema di unicità del limite}
+\subsection{Algebra dei Limiti (somma e prodotto)}
+\subsection{Teorema di permanenza del segno}
+\subsection{Teorema del confronto}
+\subsection{Limiti notevoli di successioni}
 
+\newpage
 
+\section{Serie Numeriche}
+\subsection{Carattere della $\emph{Serie Geometrica}$ e della $\emph{Serie di Mengoli}$}
+\subsection{Condizione Necessaria per la convergenza di una serie}
+\subsection{Criterio del $\emph{Confronto}$}
+\subsection{Criterio del $\emph{Confronto Asintotico}$}
+\subsection{Criterio del $\emph{Rapporto}$}
+\subsection{Comportamento di $\sum\frac{1}{n}$}
+\subsection{Comportamento di $\sum\frac{1}{(n^\alpha)}$}
+\subsection{Comportamento di $\sum\frac{1}{(n^\alpha\ln^\beta n)}$}
 
-\chapter{Successioni}
-\section{Teorema di Monotonia}
-\section{Corollario del Teorema di Monotonia}
-\section{Teorema di unicità del limite}
-\section{Algebra dei Limiti (somma e prodotto)}
-\section{Teorema di permanenza del segno}
-\section{Teorema del confronto}
-\section{Limiti notevoli di successioni}
+\newpage
 
-\chapter{Serie Numeriche}
-\section{Carattere della $\emph{Serie Geometrica}$ e della $\emph{Serie di Mengoli}$}
-\section{Condizione Necessaria per la convergenza di una serie}
-\section{Criterio del $\emph{Confronto}$}
-\section{Criterio del $\emph{Confronto Asintotico}$}
-\section{Criterio del $\emph{Rapporto}$}
-\section{Comportamento di $\sum\frac{1}{n}$}
-\section{Comportamento di $\sum\frac{1}{(n^\alpha)}$}
-\section{Comportamento di $\sum\frac{1}{(n^\alpha\ln^\beta n)}$}
-
-\chapter{Funzioni}
-\section{Teorema della continuità della Funzione Composta}
-\section{Teorema degli Zeri}
-\section{Teorema di Darboux o dei valori intermedi}
-\section{Teorema di continuità della funzione inversa}
+\section{Funzioni}
+\subsection{Teorema della continuità della Funzione Composta}
+\subsection{Teorema degli Zeri}
+\subsection{Teorema di Darboux o dei valori intermedi}
+\subsection{Teorema di continuità della funzione inversa}
 
 
 \end{document}
