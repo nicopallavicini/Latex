@@ -1,23 +1,89 @@
 \documentclass[11pt, a4paper]{book}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
 \author{Nicolò Pallavicini}
 \title{Analisi Matematica 1}
-\usepackage[italian]{babel}
 \begin{document}
-
 \maketitle
 
 \chapter{Insiemi Numerici}
 \section{Irrazionalità di $\sqrt{2}$}
+\subsection*{Dimostrazione}
+Supponiamo per assurdo che $\sqrt{2}$ $\in$ Q. Allora se così fosse, $\sqrt{2}$ sarebbe rappresentabile come $\frac{n}{m}$ con n,m $\in{N}$ e primi tra loro. Allora risolvendo l'equazione avremmo: \begin{math}
+2=\frac{n^2}{m^2},2m^2=n^2
+\end{math}.
+\\
+Ciò implica che m è pari, ma quindi anche n deve essere pari e può essere scritto come \begin{math} n=2k \end{math}
+e quindi l'equazione può essere riscritta nella forma: \begin{math} 2m^2=4n^2 \end{math} abbiamo quindi trovato che i due numeri non sono ridotti a fattori primi. \textbf{Assurdo per ipotesi, $\sqrt{2}$ deve essere irrazionale.}
+
 \section{Numerabilità di $\emph{Q}$}
+\subsection*{Dimostrazione}
+Dimostriamo che $ Q^+$ è numerabile. Rappresentiamo ogni numero razionale come $\frac{n}{m}$ con n,m interi positivi.\	
+\\
+\begin{tabular}{|c|c|c|c|}
+\hline
+\rule [-0,3cm]{0mm}{0,7cm}
+$\frac{1}{1}$ & & & \\
+\hline
+\rule [-0,3cm]{0mm}{0,7cm}
+$\frac{1}{2}$ & $\frac{2}{1}$ & &\\
+\hline
+\rule [-0,3cm]{0mm}{0,7cm}
+$\frac{1}{3}$ & $\frac{2}{2}$ & $\frac{3}{1}$ &\\
+\hline
+\rule [-0,3cm]{0mm}{0,7cm}
+$\frac{1}{4}$ & $\frac{2}{3}$ & $\frac{3}{2}$ & $\frac{4}{1}$\\
+\hline
+... & ... & ... & ...\\
+\hline
+\end{tabular}
+\\
+Ogni riga ha una lunghezza finita, quindi possiamo mettere in corrispondenza biunivoca con N.
+\\
+\begin{tabular}{lcrlcrlcrl}
+1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & ...\\
+$\frac{1}{1}$ & $\frac{1}{2}$ & $\frac{2}{1}$ & $\frac{1}{3}$ & $\frac{3}{1}$ & $\frac{1}{4}$ & $\frac{2}{3}$ & $\frac{3}{2}$ & $\frac{4}{1}$ & ...
+\end{tabular}
+\\
+\\
+\textbf{L'insieme $Q^+$ è numerabile, quindi anche Q lo è.}
+
 \section{Non Numerabilità di $\emph{R}$}
+\subsection*{Dimostrazione}
+Dimostriamo che l'intervallo [0,1] ha una cardinalità non numerabile da cui segue che R non è numerabile. Supponiamo per assurdo che [0,1] sia numerabile e disponiamo tutti i numeri reali dell'intervallo [0,1] in un elenco $r_1, r_2,r_3...$\\ Scriviamo ogni $r_i$ in forma decimale:
+\begin{tabular}{c}
+\begin{math} r_1=0,a_{11} a_{12} a_{13} ... \end{math}\\
+\begin{math} r_1=0,a_{21} a_{22} a_{23} ... \end{math}\\
+\begin{math} r_1=0,a_{31} a_{32} a_{33} ... \end{math}
+\end{tabular}
+\\
+\\
+\\x
+Definiamo $r=0,b_1 b_2 b_3 ...$ dove le cifre $b_i$ sono: 
+$
+\left \{
+\begin{array}{l}
+a_{ii}=0,1,2,3,4 \rightarrow b_i=5\\
+a_{ii}=5,6,7,8,9, \rightarrow b_i=4\\
+\end{array}
+\right.
+$
+\\	\\
+Da questa definizione risulta che $b_i \neq a_{ii} \forall i$. Osserviamo che per x $\in$ [0,1] (perchè del tipo $ 0,b_1 b_2 b_3 ...$ con i decimali tutti 4 o 5) e non è uguale a nessuno degli $r_i$ precedenti.
+\\
+\begin{tabular}{l}
+$r \neq r_1$ perchè $b_1 \neq a_{11}$\\
+$r \neq r_2$ perchè $b_2 \neq a_{22}$\\
+$r \neq r_3$ perchè $b_3 \neq a_{33}$
+\end{tabular}
+\\
+Questa è una contraddizione perchè avevamo supposto che gli $r_i$ esaurissero tutti i numeri reali dell'intervallo [0,1].
+\\
+\textbf{[0,1] non è numerabile, quindi R non è numerabile.}
+
 \section{Prodotto in forma trigonometrica di numeri di $\emph{C}$}
 \section{Potenza e radice $\textit{n-esima}$ di un numero complesso}
-prova
-\newpage
-\begin{flushleft}
-\section*{1.1}
 
-\end{flushleft}
 
 
 
