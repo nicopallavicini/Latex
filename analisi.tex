@@ -6,6 +6,7 @@
 \begin{document}
 \maketitle
 \newpage
+
 \section{Insiemi Numerici}
 \subsection{Irrazionalità di $\sqrt{2}$}
 \subsubsection*{Dimostrazione}
@@ -91,6 +92,7 @@ z_1=\rho_1(\cos(\Theta_1)+i\sin(\Theta_1)),z_2=\rho_2(\cos(\Theta_2)+i\sin(\Thet
 z_1z_2=\rho_1\rho_2(\cos(\Theta_1)\cos(\Theta_2)-\sin(\Theta_1)\sin(\Theta_2)+i(\sin(\Theta_1)\cos(\Theta_2)+\cos(\Theta_1)\sin(\Theta_2))\\
 z_1z_2=\rho_1\rho_2(\cos(\Theta_1+\Theta_2)+i\sin(\Theta_1+\Theta_2))
 \end{math}
+
 \subsection{Potenza e radice $\textit{n-esima}$ di un numero complesso}
 \subsubsection*{Dimostrazione}
 Sia w $\in$ C, $w\neq0$ e $n\geq 1$. Esistono esattamente n radici n-esime complesse $z_0,z_1, ... , z_{n-1}$ di w. Posto $ w=r(\cos\Theta + i\sin\Theta)$ e $z_k = \rho_k(\cos\Theta_k + i\sin\Theta_k)$ abbiamo:\\
@@ -107,32 +109,115 @@ Abbiamo dimostrato che \textbf{Esistono esattamente n radice n-esime complesse.}
 
 \section{Successioni}
 \subsection{Teorema di Monotonia}
+\subsubsection*{Dimostrazione}
+Sia $\left\{
+\begin{array}{l}
+a_n
+\end{array}
+\right\}
+$ una successione monotona crescente e superiormente limitata. Allora $\left\{\begin{array}{l}a_n\end{array}\right\}$ è convergente e il suo limite è uguale a sup$\left\{\begin{array}{l}a_n : n \in N \end{array}\right\}$.\\
+Consideriamo l'insieme dei valori assunti dalla successione, questo insieme è limitato superiormente quindi esiste il sup. $\Lambda=sup\left\{\begin{array}{l}a_n : n \in N \end{array}\right\}, \hspace{0.1cm} \Lambda \in R$.\\
+Proviamo che $\lim_{n\to+\infty}a_n=\Lambda$.\\ Bisogna mostrare che $\forall\varepsilon>0, \hspace{0.2cm} \Lambda-\varepsilon<a_n<\Lambda+\varepsilon$ definitivamente.\\
+$\forall\hspace{0.1cm} n, \hspace{0.2cm} a_n\leq\Lambda+\varepsilon$ definitivamente perchè $\Lambda$ è estremo superiore.\\
+Per definizione $\Lambda$ è il minimo dei maggioranti. Perciò essendo $\Lambda-\varepsilon<\Lambda$ certamente, $\Lambda-\varepsilon$ non è un maggiorante, quindi $\exists\hspace{0.1cm}n_0 : a_{n_0}<\Lambda-\varepsilon$. Essendo monotona crescente $\forall\hspace{0.1cm}n\geq n_0, \hspace{0.1cm}\Longrightarrow\hspace{0.1cm}a_{n_0}>\Lambda-\varepsilon$ definitivamente.\\
+\textbf{Quindi $\lim_{n\to+\infty}a_n=\Lambda$.}
+
 \subsection{Corollario del Teorema di Monotonia}
+\subsubsection*{Dimostrazione}
+Sia $\left\{\begin{array}{l}a_n\end{array}\right\}$ una successione monotona crescente.\\ Allora esiste $\lim_{n\to+\infty}a_n=sup\left\{\begin{array}{l}a_n : n \in N \end{array}\right\}$. Se $\left\{\begin{array}{l}a_n\end{array}\right\}$ è superiormente limitata allora converge, se $\left\{\begin{array}{l}a_n\end{array}\right\}$ è superiormente illimitata allora diverge a $+\infty$.\\
+Se la successione è superiormente limitata abbiamo il Teorema di Monotonia.\\
+Se $\left\{\begin{array}{l}a_n\end{array}\right\}$ è illimitata superiormente, vuol dire che $\forall\hspace{0.1cm}k>0, \exists\hspace{0.1cm} n_0 : a_{n_0}>k$ definitivamente.\\ Essendo la successione crescente ogni $n>n_0 \Longrightarrow a_n \geq a_{n_0}>k$. Abbiamo provato che $\forall\hspace{0.1cm}k>0, a_n>k$ definitivamente.\\
+\textbf{Quindi $a_n \rightarrow +\infty$}
+
 \subsection{Teorema di unicità del limite}
+\subsubsection*{Dimostrazione}
+Se esiste $\lim_{x\to c}f(x)=l$, tale limite l è unico. Infatti, se esistessero due limiti $l_1 e l_2$ diversi tra lor, presa una qualsiasi successione $x_n\rightarrow c$ si avrebbe: $f(x_n)\rightarrow l_1$ e $f(x_2)\rightarrow l_2$ dunque la successione $f(x_n)$ avrebbe due limiti distinti, assurdo.\\
+\textbf{Il Limite è quindi unico.}
+
 \subsection{Algebra dei Limiti (somma e prodotto)}
+\subsubsection*{Dimostrazione Somma}
+$a_n \rightarrow a, \hspace{0.2cm} b_n\rightarrow b \Longrightarrow a_n+b_n \rightarrow a+b$\\
+Fissiamo $\varepsilon > 0$ e consideriamo:\\
+$|(a_n + b_n)-(a+b)|\leq |a_n-a|+|b_n-b|$\\
+$|a_n-a|<\varepsilon \hspace{0.2cm}$ e $\hspace{0.2cm}|b_n-b|<\varepsilon$ definitivamente\\
+$|(a_n+b_n)-(a+b)|<2\varepsilon$ definitivamente\\
+$\Longrightarrow a_n+b_n \rightarrow a+b$
+\subsubsection*{Dimostrazione Prodotto}
+$a_n \rightarrow a, \hspace{0.2cm} b_n \rightarrow b \Longrightarrow a_nb_n\rightarrow ab$\\
+Fissiamo $\varepsilon > 0$:\\
+$|a_nb_n-ab|=|a_n(b_n+b)+b(a_n-a)|\leq|a_n(b_n-b)|+|b(a_n-a)|=|a_n||b_n-b|+|b||a_n-a|$\\
+Poichè $a_n \rightarrow a, \hspace{0.2cm} |a_n-a|<\varepsilon$ definitivamente e inoltre $|a_n|<|a|+\varepsilon$ definitivamente.\\
+Poichè $b_n \rightarrow b, \hspace{0.2cm} |b_n-b|<\varepsilon$ definitivamente.\\
+Quindi: $|a_nb_n-ab|<(|a|+\varepsilon)\varepsilon+|b|\varepsilon<\varepsilon*costante$ definitivamente.\\
+Per l'arbitrarietà di $\varepsilon$ segue la tesi.\\
+$\Longrightarrow a_nb_n \rightarrow ab$
+
 \subsection{Teorema di permanenza del segno}
+\subsubsection*{Dimostrazione}
+Se $a_n\rightarrow a$ e $a>0$ allora $a_n>0$ definitivamente.\\
+Fissato $\varepsilon>0$, per definizione di limite abbiamo: $|a_n-a|<\varepsilon$ definitivamente.\\
+$a-\varepsilon<a_n<a+\varepsilon$ definitivamente. Poichè $a>0$ possiamo scegliere $\varepsilon>0$ in modo che $a-\varepsilon>0$ allora $a-\varepsilon<a_n$.\\
+\textbf{Mostro che $a_n>0$ definitivamente.}
+
 \subsection{Teorema del confronto}
+\subsubsection*{Dimostrazione}
+Se $a_n \leq b_n \leq c_n$ definitivamente e $a_n \rightarrow l$ e $c_n \rightarrow l \in R$ allora anche $b_n \rightarrow l$.\\
+Fissiamo $\varepsilon>0$, allora definitivamente abbiamo: \\$l-\varepsilon<a_n<l+\varepsilon$; $\hspace{0.5cm} l-\varepsilon<c_n<l+\varepsilon$\\ Segue definitivamente $l-\varepsilon<a_n \leq b_n \leq c_n<l+\varepsilon$\\ Quindi definitivamente $l-\varepsilon<b_n<l+\varepsilon$\\
+\textbf{$\Longrightarrow b_n\rightarrow l$.}
+
 \subsection{Limiti notevoli di successioni}
+\subsubsection*{Dimostrazione}
 
 \newpage
 
 \section{Serie Numeriche}
 \subsection{Carattere della $\emph{Serie Geometrica}$ e della $\emph{Serie di Mengoli}$}
+\subsubsection*{Dimostrazione}
+
+
 \subsection{Condizione Necessaria per la convergenza di una serie}
+\subsubsection*{Dimostrazione}
+
+
 \subsection{Criterio del $\emph{Confronto}$}
+\subsubsection*{Dimostrazione}
+
+
 \subsection{Criterio del $\emph{Confronto Asintotico}$}
+\subsubsection*{Dimostrazione}
+
+
 \subsection{Criterio del $\emph{Rapporto}$}
+\subsubsection*{Dimostrazione}
+
+
 \subsection{Comportamento di $\sum\frac{1}{n}$}
+\subsubsection*{Dimostrazione}
+
+
 \subsection{Comportamento di $\sum\frac{1}{(n^\alpha)}$}
+\subsubsection*{Dimostrazione}
+
+
 \subsection{Comportamento di $\sum\frac{1}{(n^\alpha\ln^\beta n)}$}
+\subsubsection*{Dimostrazione}
 
 \newpage
 
 \section{Funzioni}
 \subsection{Teorema della continuità della Funzione Composta}
-\subsection{Teorema degli Zeri}
-\subsection{Teorema di Darboux o dei valori intermedi}
-\subsection{Teorema di continuità della funzione inversa}
+\subsubsection*{Dimostrazione}
 
+
+\subsection{Teorema degli Zeri}
+\subsubsection*{Dimostrazione}
+
+
+\subsection{Teorema di Darboux o dei valori intermedi}
+\subsubsection*{Dimostrazione}
+
+
+\subsection{Teorema di continuità della funzione inversa}
+\subsubsection*{Dimostrazione}
 
 \end{document}
